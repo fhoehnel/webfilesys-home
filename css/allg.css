@@ -1,0 +1,215 @@
+@font-face {
+  font-family: 'Kite One';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Kite One'), local('KiteOne-Regular'), url(../fonts/GoogleKiteOne.woff) format('woff');
+}
+
+html {
+    font-size: 20px;
+    background-color: #d0d0d0;
+}
+
+td, th {
+    font-size: 1.0rem;
+}
+
+div.pageTitle {
+	margin: 0;
+	padding: 10px 20px;
+    background-color: #a0a0a0;
+}
+
+span.pageTitle1 {
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	color: #FFFF80;
+    font-size: 2.4rem;
+	font-weight: bold;
+	text-shadow: 2px 4px 4px #202020;
+}
+
+span.pageTitle2 {
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	color: #b0b0ff;
+    font-size: 2.0rem;
+	font-weight: bold;
+	text-shadow: 2px 4px 4px #202020;
+}
+
+#menuContent {
+    background-color: #a0a0a0;
+	border-bottom-right-radius: 20px;
+}
+
+div.menuCont {
+    width: 195px;
+    background-color: #a0a0a0;
+}
+
+div.menuItem {
+	background-color: #303080;
+    border: 2px solid #FFFF80;
+	border-radius: 6px;
+	padding: 4px 8px;
+    margin: 10px 6 10px 6px;
+}
+
+div.menuItem a {
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 1rem;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+a.menuItem {
+	color: #FFFF80;
+}
+
+a.menuItemActive{
+	color: ivory;
+}
+
+a.menuItem:hover {
+    color: ivory;
+	text-shadow: 2px 2px 2px ivory;
+}
+
+a.menuItemActive:hover {
+	color: #ffffff;
+}
+
+div.loginFormLabel {
+    width: 190px;
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 1rem;
+	color: #FFFF80;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+div.loginFormField {
+    width: 190px;
+	margin-left: 10px;
+}
+
+div.loginFormField input[type='text'],
+div.loginFormField input[type='password'] {
+    width: 160px;
+	color: #000000;
+	background-color: ivory;
+    border: 1px solid #808080;
+	border-radius: 4px;
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 1rem;
+	font-weight: normal;
+}
+
+div.loginButton {
+    width: 160px;
+	margin-left: 10px;
+	margin-top: 16px;
+}
+
+div.loginButton input {
+    border: 1px solid #000000;
+	border-radius: 4px;
+	color: #202020;
+	background-color: c0c0c0;
+	padding: 5px 20px;
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	font-size: 0.8rem;
+	font-weight: bold;
+}
+
+div.loginButton input:hover {
+	background-color: e0e0e0;
+}
+
+div.loginLink {
+    width: 160px;
+	margin-left: 10px;
+	margin-top: 10px;
+}
+
+div.loginLink a:hover {
+    color: ivory;
+	text-decoration: underline;
+}
+	
+body.title {
+    margin-top: 20px;
+	margin-left: 20px;
+	font-size: 10pt;
+	background-color: lavender;
+	font-family: Arial,Helvetica;
+}
+
+body.content {
+    margin-top: 0px;
+	margin-left: 0px;
+	margin-right: 0px;
+	width: 1380px;
+	font-size: 1rem;
+    font-family: 'Kite One',Verdana,Arial,Helvetica,sans-serif;
+	background: linear-gradient(to bottom right, #b0b0ff, #d0d0d0);
+	background-repeat: no-repeat;
+}
+
+td.content {
+    width: 800px;
+    padding-left: 15px;
+	padding-top: 10px;
+	padding-right:10px;
+}
+	
+img.titlePic {
+	/*
+    width: 918px;
+	height: 760px;
+	*/
+	border: 2px ridge #404040;
+	margin-top: 10px;
+	box-shadow: 10px 10px 5px #666666;
+	border-radius:5px
+}
+	
+a {
+    font-size: 1rem;
+	color: navy;
+}
+
+a:hover {
+    color: #FFFF80;
+}
+
+td {
+    vertical-align:top;
+}
+
+h2 {
+    font-size: 1.2rem;
+	color: black;
+	font-weight: bold;
+}
+
+h3 {
+    font-size: 1rem;
+	color: black;
+	font-weight: bold;
+	margin-bottom: 0;
+}
+
+h4.month {font-size:11pt;color:black;font-family:Verdana,Arial,Helvetica;font-weight:bold;font-style:italic;}
+
+.news {
+    font-size: 1rem;
+	color: #a00000;
+	font-weight: bold;
+}
+
+img.slideshowPic {
+    position: absolute;
+	left: 210px;
+	top: 150px;
+	opacity: 0.0;
+}

@@ -1,0 +1,344 @@
+<html>
+<head>
+
+<meta name="author" content="Frank Hoehnel"> 
+
+<meta name="description" content="WebFileSys is a web-based multi-user filemanager written in Java. It can be used to manage remote servers, as user-friendly interface for webspace providers, as web photo album and for shared document management."> 
+
+<meta name="keywords" content="web-based filemanager, Java, photo album, blog, diary, document management, servlet, picture, synchronize, calendar, reminder, private cloud, own cloud"> 
+
+<title>WebFileSys - the universal web-based filemanager</title>
+
+<meta name="robots" content="INDEX,FOLLOW"/>
+
+<link rel="stylesheet" type="text/css" href="css/allg.css">
+
+<script type="text/javascript" src="js/menu.js"></script>
+
+</head>
+<body class="content" onload="loadMenu(1)">
+
+<div class="pageTitle">
+  <span class="pageTitle1">WebFileSys</span>
+  <span class="pageTitle2" style="margin-left:20px">the unviversal web-based filemanager</span>
+</div>
+
+<table border="0" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td id="menuContent">
+      <!-- load menu via ajax here -->
+    </td>
+
+    <td class="content">
+
+
+<img src="images/fmwebSpiderWeb.gif" border="0" align="left">
+
+<h3> Introduction </h3>
+
+WebFileSys is a web based file manager, web picture album and web calendar/reminder.
+It runs as a standard Java web application in any servlet container.
+Although WebFileSys is a platform-independent Java application, it offers most functions
+that file managers designed for a single operating system provide.
+A rich set of picture browsing and manipulation functions as well as the 
+Google Maps and Google Earth integration make it a good choice
+for sharing photos on the intranet or internet.
+WebFileSys can be used by webspace providers to give the users convenient access to their files.
+If installed on a server accessible from the internet, it can be used as a private cloud.
+WebFileSys is a multi-user application, each user can have it's own home directory.
+WebFileSys does not need any external database. All persistent information is stored
+in cached XML files. WebFileSys is consistently using UTF-8 character encoding to ensure 
+optimum support for different languages. The highly optimized folder and file browsing functions
+based on Ajax technology make WebFileSys one of the fastest web file managers available.
+
+<h3>New in release 2.32.0 (20 Jan 2026)</h3>
+
+Fixed a security problem.<br/>
+Various small functional enhancements, bugfixes and code quality improvements.
+
+<h3> Users and Security </h3>
+
+WebFileSys can be run in open registration mode (self-registration for new users allowed)
+or in closed registration mode (only an admin user can create new accounts).
+
+<br>
+Self-registration is a two step process. After the new user has filled the registration form, 
+an e-mail containing an activation link is sent to the given e-mail address. After the user has klicked on the activation link, 
+the account is ready for login. 
+<br>
+
+WebFileSys users can be assigned to one of the roles <b>admin</b>, <b>user</b> and <b>webspace</b> with different 
+access rights and functions available. Self-registered users are always assigned to role <b>webspace</b>.
+
+<br>
+For each user a read/write and a read-only password can be defined.
+
+<br>
+User data are stored in a cached XML file and the passwords are encrypted.
+<br>
+Experienced Java programmers can replace the default XML-based user manager by a self-written
+user manager class to access an existing user database.
+<br/>
+An alternative user manager for authentication against a LDAP directory is contained in the distribution. 
+<br>
+For secure access to WebFileSys via HTTPS the servlet container or the web server must be configured to use the SSL protocol.
+
+<h3> Software Requirements </h3>
+
+WebFileSys is a standard Java web application and should run in any servlet container
+using JDK 1.6 or higher.
+<br>
+Most extensive tests have been performed on the Apache tomcat servlet engine.
+Other servlet containers on which WebFileSys has been run successfully are glassfish, jetty and IBM WebSphere.
+<br/>
+To be able to use the video functions an installation of the ffmpeg program is required 
+on the machine that runs the WebFileSys server.
+<br><br>
+
+On client side the following browsers are supported:
+<ul>
+  <li>Mozilla Firefox</li>
+  <li>Google Chrome</li>
+  <li>Apple Safari</li>
+  <li>Microsoft Internet Explorer version 9 and higher</li>
+  <li>Microsoft Egde</li>
+  <li>Chrome and Firefox on Android</li>
+</ul>  
+The mobile interface has been tested with web browsers running on various Android devices.
+
+<br><br>
+The following features must be enabled in the browser configuration:
+
+<ul>
+  <li>Javascript</li>
+  <li>session cookies</li>
+  <li>XmlHttpRequest (for Ajax functions)</li>
+</ul>
+
+These features are enabled by default in a new installed browser instance.
+<br/>
+
+The browser must be configured to allow popup windows for the WebFileSys server, which is not default in most browsers.
+
+<H3>File and Directory Management Functions </H3>
+WebFileSys offers a rich set of functions to manage folders and files. 
+See a nearly complete list of available functions under <a href="features.html">Features</a>
+
+<H3>Search Functions</H3>
+WebFileSys can search directory trees for files matching a 
+given filename pattern and/or containing a search phrase (full text 
+search). The search can also include attached meta information (descriptions).
+<BR>
+The search can be restricted to files within a given modification 
+date range.
+<br>
+Searching for files assigned to a certain category is possible too.
+
+<h3>Bookmarks</h3>
+Lost in the deepness of the filesystem tree? Save the path to important folders as bookmarks.
+The bookmark button in the menu bar opens the bookmark list and with a single mouse click
+you can navigate back for example to a subfolder where your important configuration files reside.
+Bookmarked folders are also included in the reduced fastpath folder tree.
+
+<H3>Fastpath function</H3>
+WebFileSys remembers the directories that the user has 
+visited. 
+<BR>
+The fastpath function shows a reduced folder tree containing only these
+recently visted directories plus bookmarked folders for quick navigation. 
+
+<H3>Statistics</H3>
+WebFileSys can determine various statistical data about a directory 
+tree and display it as graphical charts, for example as a sunburst diagram.
+<br>
+The optional download statistic function counts the downloads
+of each file.
+
+
+<H3>Attaching meta information to files and directories</H3>
+WebFileSys allows to 
+attach meta information to files and directories, for example a description for 
+a picture or comments about the contents of a directory. 
+<BR>Meta information is displayed as headline or as title text of images.
+<BR>
+The meta information is stored in a cached XML file in the same directory where the file 
+resides. 
+<BR>
+If a file or directory with existing meta information is copied or 
+moved by WebFileSys, the meta information is moved together with the file/folder. 
+
+
+<H3>Special Picture Functions </H3>
+WebFileSys provides a thumbnail view of all image files (JPEG, GIF, PNG and BMP)
+in the current directory.
+<BR>
+Optionally WebFileSys can automatically create and store thumbnail files for 
+large images, which are used instead of the original files for the thumbnail 
+view (to optimize performance). Thumbnails are automatically garbage-collected 
+if the original image has been deleted.
+<BR><BR>
+The automatic or manual slideshow function shows pictures scaled to fit on the screen.
+<BR><BR>
+WebFileSys can convert images between the formats JPEG, GIF and PNG.
+Resizing of pictures is supported. Lossless JPEG image transformation
+(rotation, mirroring) is provided using the MediaUtil framework.
+A copyright text can be stamped on the image. Pictures can be cropped.
+<BR><BR>
+WebFileSys can create a "picture story" showing the pictures of a folder side by side with their associated description text.
+<br><br>
+For JPEG pictures produced by digital cameras the camera meta data
+(called EXIF data) can be displayed, including for example
+date of exposure, apperture, flash used or not, GPS location data and many more.
+JPEG picture files from digicams can be renamed to the exposure date.
+
+<h3>Sharing Folders</h3>
+WebFileSys provides functions for sharing folders as directory/file tree or as picture album. 
+An invitation containing a link with access code can be sent via e-mail to the visitors. 
+The access to the published folder can be time-limited. Visitors can be allowed to add comments. 
+The picture rating function makes WebFileSys a good platform for photo contests.
+
+<h3>Geotagging and maps integration</h3>
+A geographic location can be assigned to picture files. The location can be selected on a Google Maps window. 
+Visitors of the picture album can view the assigned location on various map types, for example Open Street Maps and Google Maps.
+
+<h3>Blogs and Diaries</h3>
+The blog and diary functions have been moved to the new sister project 
+<a href="https://www.webfilesys.de/arcoiris/" target="_blank">arcoiris blog</a>.
+
+<h3>MP3 music file support</h3>
+WebFileSys allows to view and edit the MP3 Tags of MP3 music files.
+Information stored in MP3 tags include title,
+artist, album, year of publishing, genre and additional comments.
+<br>
+Optionally WebFileSys can automatically extract MP3 tag information from all MP3 files
+found in the folders browsed by the user. The MP3 tag info is stored as meta information
+(description) of the file.
+
+<h3>Folder Synchronization</h3>
+The folder synchronisation function can be used to make incremental backups of folders 
+or simply for keeping the contents of two folders in snyc.
+
+<h3>DiffTree</h3>
+The DiffTree function shows a reduced folder tree containing only changed subfolders and files.
+This is a great way to visualize the differences between to folder trees. 
+A good usage example for the DiffTree is to show which parts of the source code
+of a software development project have changed between two releases.
+
+<h3>Comparing Files</h3>
+The differences of two text files can be determined and are shown in a 3 column window side by side.
+
+<h3>Folder Backup via FTP</h3>
+WebFileSys has a built-in FTP client to allow the backup of folder trees to a FTP server.
+
+<h3>Folder Watch Function</h3>
+The user can select folders to be watched for changes by WebFileSys. 
+If files or subdirectories in the watched folder are created, changed or deleted, WebFileSys will send a notification e-mail.
+
+<h3>E-mail Notification</h3>
+WebFileSys can send e-mails via a SMTP server to notify administrators of certain events,
+for example successful user self-registration and failed login attempts.
+
+<h3>Disk quota support</h3>
+For users of role <b>webspace</b> WebFileSys provides an optional disk
+quota checking.
+<br>
+For each user the administrator can specify the maximum allowed size
+of the files in the folder tree below the user's home directory.
+<br>
+Disk quota checking runs once a day as a low-priority background process.
+<br>
+In case of exceeded disk quota the user and the administrator can optionally be
+notified by e-mail.
+
+<h3>Custom View Handlers</h3>
+WebFileSys provides an interface to plug in view handlers for special file types.
+Some view handlers are included in the WebFileSys distribution, 
+for example a log file viewer, a Java source code viewer, a JSON data viewer, a viewer for Java keystore and certificate files
+and a viewer for GPX files containing GPS tracks (includes Diagrams and shows the track on a Google Map).
+View Handlers can operate on files contained in ZIP archives without extracting the files first.
+
+<h3>WebCalendar/Reminder</h3>
+WebFileSys features a WebCalender with a stylish circular presentation of the year and the month. 
+Appointments can be stored and the reminder function notifies the user.
+
+<h3>Mobile GUI</h3>
+WebFileSys offers a special frontend for mobile devices. The pages of the mobile GUI are optimized for small touch screens.
+
+<h3>Customization of the user interface</h3>
+Most parts of the WebFileSys user interface are generated via XSL transformation from XML data.
+By customizing the XSL stylesheets the resulting HTML pages can be changed to fit into 
+a given corporate design or to match the design of an existing web site.
+
+<H3>Layout Customization with CSS</H3>
+
+The appearance of the user interface can be customized by CSS stylesheet files.
+You can change colors, background colors and fonts of most parts of the WebFileSys user interface.
+<br>
+Each user can be assigned one of the available CSS stylesheets.
+
+<h3>LDAP Autentication</h3>
+WebFileSys provides an alternative user manager which authenticates users against a LDAP directory, while the 
+WebFileSys-specific user data are stored in the default WebFileSys user database (cached XML file). WebFileSys can use
+a SSL(TLS)-secured connection to the LDAP server, which is recommended.
+
+<h3> Included software from other authors </h3>
+The MediaUtil framework (http://mediachest.sourceforge.net/mediautil) written by Dmitriy Rogatkin and Suresh Mahalingam is used for
+lossless JPEG image transformation.
+<br>
+A library from Drew Noakes called ExifExtractor is used to extract EXIF data from digicam pictures.
+<br>
+XML and XSLT libraries from the Apache projects Xerces and Xalan are used. The libraries have been re-packaged
+to reduce the size of the WebFileSys download.
+<br>
+The Apache Commons net library is used for FTP client support.
+<br>
+The GifEncoder from the ACME library (http://www.acme.com/java) is used to 
+write GIF images.
+<br>
+The NEUQUANT Neural-Net quantization algorithm by Anthony Dekker is being used
+for color quantization in GIF image creation.
+<br>
+WebFileSys uses the datepicker from the jQuery UI project (https://jqueryui.com).
+<br>
+Browsers that do not support XSLT or have no Javascript interface to the XSLT engine
+are using the Google Javascript XSLT library ajaxslt for partial page rendering.
+<br>
+WebFileSys uses the Google Maps API to select and display geographic location data for pictures and folders.
+<br>
+The Java source file viewer is based on the Java2Html converter written by Markus Gebhard
+(http://www.java2html.de/).
+<br>
+TAR archives are managed using the Java Tar Package written by Tim Endres (http://www.trustice.com).
+<br>
+The diff algorithm written by Neil Fraser at Google is used for finding the differences between two files in the compare function.
+<br>
+The LZC implementation from Igor Gatis hosted at google code (http://code.google.com/p/compress-j2me) is used for compress/uncompress functions.
+<br>
+The color picker script jscolor written by Jan Odvarko (http://jscolor.com) is used to select folder text colors.
+<br>
+The icon font from Font Awesome (http://fortawesome.github.io/Font-Awesome) is included.
+<br>
+Spanish translation contributed by Miguel Sanz.
+<br>
+Sample ViewHandler for stamping a PDF document with userid contributed by Leonardo F. Cardoso.
+
+<h3> License </h3>
+WebFileSys is licensed under the GPL V3.
+<br>
+The author gives no warranty at all! Use the program at your own risk.
+<br>
+The author asks you to register your copy of WebFileSys for free by sending an
+e-mail to the address given under Contact. Please include information about
+the platform (operating system, servlet container) you are using as WebFileSys server, the version
+of WebFileSys you run, and the purpose you are using it for.
+<br>
+<a href="http://www.webfilesys.de/flowers/cacti/Echinopsis.html" style="font-family:Arial;color:#c0c0e0";font-size:6pt;text-decoration:none">Echinopsis hybrids</a>
+
+    </td>
+  </tr>
+  
+</table>
+
+</body>
+</html>

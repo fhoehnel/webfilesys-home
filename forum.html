@@ -1,0 +1,260 @@
+<html>
+<head>
+<title>WebFileSys homepage</title>
+
+<link rel="stylesheet" type="text/css" href="css/allg.css">
+
+<style type="text/css">
+  body {background-color:#f1f5b1;background-image:url(images/colorbar.gif);background-repeat:repeat-y;background-position:top left;}
+</style>
+
+</head>
+<body class="content">
+
+<table border="0" width="100%" cellpadding="3" cellspacing="0" style="background-image:url('images/head-background2.gif');">
+  <tr>
+    <td>
+      <img src="images/space.gif" width="20" height="1" border="0">
+    </td>
+    <td valign="middle">
+      <img src="images/title.gif" border="0">
+    </td>
+    <td align="right" width="90%">
+      <img src="images/space.gif" width="10" border="0">
+    </td>
+  </tr>
+</table>
+
+
+
+<table border="0" width="100%" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td>
+    
+      <style type="text/css">
+  td.menu {height:30px;vertical-align:middle;background-image:url("images/menuback.gif");border-right-style:solid;border-right-width:1px;border-right-color:navy;}
+</style>
+
+<script language="javascript">
+  
+  var save;
+  
+  var lastCurrentLink=null;
+  
+  function setCurrentAndLink(menulink,link)
+  {
+      if (lastCurrentLink != null)
+      {
+          lastCurrentLink.style.color="black";
+      }
+  
+      menulink.style.color="red";
+      
+      lastCurrentLink=menulink;
+      
+      window.location.href = link;
+  }
+ 
+</script>
+
+
+<table border="0" width="180" cellpadding="0" cellspacing="0">
+
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+
+  <tr>
+    <td class="menu">
+      <a name="item1" class="menu" href="index.html">
+        Home
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item2" class="menu" href="webfilesys.html">
+        About WebFileSys
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item3" class="menu" href="releasenotes.html">
+        Release Notes
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item4" class="menu" href="screenshots.html">
+        Screenshots
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item5" class="menu" href="features.html">
+        Features
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item5" class="menu" href="onlineDemo.html">
+        Online Demo
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item6" class="menu" href="download.html">
+        Download
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+  
+  <tr>
+    <td class="menu">
+      <a name="item7" class="menu" href="forum.html">
+        Forum
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+  
+  <tr>
+    <td class="menu">
+      <a name="item8" class="menu" href="contact.html">
+        Contact
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td class="menu">
+      <a name="item9" class="menu" href="donation.html">
+        Donations
+      </a>
+    </td>
+  </tr>
+  <tr>
+    <td class="separator" height="1"><img src="images/space.gif" height="1"></td>
+  </tr>
+
+  <tr>
+    <td height="2"><img src="images/space.gif" height="20"></td>
+  </tr>
+
+
+  <form method="post" action="http://www.webfilesys.de/webfilesys/servlet" target="_blank">
+  <input type="hidden" name="command" value="login">
+    
+  <tr>
+    <td style="padding-left:10px;font-size:10pt;font-family:Arial,Helvetica">
+      Userid:
+    </td>
+  </tr>
+ 
+  <tr>
+    <td style="padding-left:5px;">
+      <INPUT TYPE="TEXT" NAME="userid" SIZE=15 MAXLENGTH=30 VALUE="" style="width:160px;background-color:#f1f5b1;">
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding-left:10px;padding-top:5px;font-size:10pt;font-family:Arial,Helvetica">
+      Password:
+    </td>
+  </tr>
+  
+  <tr>
+    <td style="padding-left:5px;">
+      <INPUT TYPE="PASSWORD" NAME="password" SIZE=15 MAXLENGTH=30 VALUE="" style="width:160px;background-color:#f1f5b1;">
+    </td>
+  </tr>
+
+  <tr>
+    <td style="padding-left:10px;padding-top:10px;">
+      <input type="submit" value="Login">
+    </td>
+  </tr>
+      
+  </form>
+
+  <tr>
+    <td height="2"><img src="images/space.gif" height="20"></td>
+  </tr>
+
+  <tr>
+    <td style="padding-left:10px;font-size:10pt;font-family:Arial,Helvetica">
+      <a href="http://www.webfilesys.de/webfilesys/servlet?command=registerSelf" target="_blank">New Account</a>
+    </td>
+  </tr>
+
+    
+</table>
+
+
+    
+    </td>
+
+    <td align="left" width="90%" style="padding-left:15px;padding-top:10px;padding-right:10px;">
+
+
+
+
+<H2>WebFileSys forum </H2>
+
+Search the WebFileSys forum for answers to WebFileSys-related questions or post your problem
+as new forum topic.
+
+<br><br>
+
+The WebFileSys forum has been flooded with spam messages. That's why posting as anonymous user was disabled.
+You have to register now to be able to create a new topic.
+<br><br>
+
+<a href="http://www.webfilesys.de:8080/jforum" target="_blank">Enter the forum here</a>
+
+    </td>
+  </tr>
+  
+</table>
+
+</body>
+</html>
